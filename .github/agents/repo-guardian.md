@@ -4,7 +4,7 @@ description: "リポジトリのベストプラクティス準拠状況を監査
 tools:
   - search
   - editFiles
-  - terminalCommand
+  - runInTerminal
   - fetch
 ---
 

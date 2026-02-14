@@ -30,6 +30,17 @@
 
 - [ ] **README.md**: プロジェクトの目的・セットアップ手順・使い方
 
+### 開発環境
+
+- [ ] **devcontainer.json**: 統一された開発環境の定義（gh CLI・Docker 利用可能）
+- [ ] **extensions.json**: VS Code 推奨拡張機能の定義
+
+### AI コーディング
+
+- [ ] **Copilot Hooks**: コード生成後の自動品質チェック（postSave / postCommand）
+- [ ] **カスタムエージェント**: 用途別サブエージェントの定義（`.github/agents/`）
+- [ ] **Agent Skills**: エージェントが参照するスキル定義（`.github/skills/`）
+
 ## 推奨項目
 
 - [ ] **typos**: 誤字検知の CI 統合
@@ -51,3 +62,4 @@
 | 日付 | 変更内容 |
 |------|---------|
 | 2026-02-14 | 初版作成 |
+| 2026-02-14 | 開発環境（devcontainer・推奨拡張）、AI コーディング（Hooks・サブエージェント・git-workflow Skill）を追加 |

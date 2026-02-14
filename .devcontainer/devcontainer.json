@@ -1,0 +1,35 @@
+// Dev Container 設定
+// 詳細: https://containers.dev/implementors/json_reference/
+{
+  "name": "develop-base",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  // ── Features ──
+  // gh CLI・Docker-outside-of-Docker を追加
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+
+  // ── 初回セットアップ ──
+  "postCreateCommand": "echo '✅ Dev Container ready. Run: gh auth login'",
+
+  // ── VS Code カスタマイズ ──
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "DavidAnson.vscode-markdownlint",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "EditorConfig.EditorConfig"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
