@@ -1,10 +1,10 @@
-# pio-chat
+# sample-app
 
 <!-- TODO: プロジェクトの説明を記入してください -->
 
 ## 概要
 
-pio-chat は...（プロジェクトの目的・概要をここに記述）
+sample-app は...（プロジェクトの目的・概要をここに記述）
 
 ## セットアップ
 
@@ -17,8 +17,8 @@ pio-chat は...（プロジェクトの目的・概要をここに記述）
 ### インストール
 
 ```bash
-git clone https://github.com/pioyan/pio-chat.git
-cd pio-chat
+git clone https://github.com/pioyan/sample-app.git
+cd sample-app
 # TODO: インストールコマンドを記入してください
 ```
 

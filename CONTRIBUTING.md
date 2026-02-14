@@ -1,6 +1,6 @@
 # Contributing Guide
 
-pio-chat への貢献にご興味をいただきありがとうございます！
+sample-app への貢献にご興味をいただきありがとうございます！
 このドキュメントでは、プロジェクトへの参加方法を説明します。
 
 ## 開発の流れ
@@ -8,10 +8,10 @@ pio-chat への貢献にご興味をいただきありがとうございます�
 ### 1. Issue の作成
 
 - バグを見つけた場合は
-  [Bug Report](https://github.com/pioyan/pio-chat/issues/new?template=bug_report.yml)
+  [Bug Report](https://github.com/pioyan/sample-app/issues/new?template=bug_report.yml)
   テンプレートを使用してください
 - 新機能の提案は
-  [Feature Request](https://github.com/pioyan/pio-chat/issues/new?template=feature_request.yml)
+  [Feature Request](https://github.com/pioyan/sample-app/issues/new?template=feature_request.yml)
   テンプレートを使用してください
 - 作業を開始する前に、既存の Issue を確認し、重複がないか確認してください
 
@@ -69,5 +69,5 @@ git checkout -b <type>/<short-description>
 
 ## 質問・サポート
 
-- 開発に関する質問は [Discussions](https://github.com/pioyan/pio-chat/discussions) をご利用ください
+- 開発に関する質問は [Discussions](https://github.com/pioyan/sample-app/discussions) をご利用ください
 - バグ報告とは別に、使い方の質問もこちらで受け付けています
