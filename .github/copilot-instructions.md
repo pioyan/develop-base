@@ -10,7 +10,7 @@ sample-app は pioyan が開発するサンプルプロジェクトです。
 .devcontainer/
 └── devcontainer.json    # Dev Container 設定（gh CLI・推奨拡張）
 .github/
-├── agents/              # Custom Agents（Repo Guardian・Code Reviewer・Docs Writer）
+├── agents/              # Custom Agents（Agent Builder・Repo Guardian・Code Reviewer・Docs Writer）
 ├── skills/              # Agent Skills（監査・適用・CI・Dependabot・Git ワークフロー）
 ├── policies/            # 組織ポリシー文書（チェックリスト・ツール一覧）
 ├── workflows/           # GitHub Actions CI
@@ -75,9 +75,11 @@ PR を作成すると以下の衛生チェックが自動実行されます:
 
 | エージェント | 用途 |
 |------------|------|
+| `@agent-builder` | ユーザーの要件に応じたカスタムエージェントを対話的に設計・生成（コード実装エージェントには TDD サイクルを組み込み） |
 | `@repo-guardian` | リポジトリのベストプラクティス準拠を監査し、不足分を PR で追加 |
 | `@code-reviewer` | PR の差分をレビューし、品質・セキュリティ観点でコメントを提案 |
 | `@docs-writer` | コード変更に伴うドキュメント更新提案を生成 |
+| `@dev-env-builder` | ユーザーの要件に応じた開発環境（Dev Container・CI・Dependabot 等）を対話的に構築 |
 
 ## Agent Skills
 
@@ -87,6 +89,7 @@ PR を作成すると以下の衛生チェックが自動実行されます:
 - `/repo-apply-baseline` — 不足ファイルを追加する
 - `/ci-hygiene` — CI 衛生チェックの導入手順
 - `/dependabot-baseline` — Dependabot の最小構成導入手順
+- `/dev-env-setup` — 言語・フレームワークに応じた開発環境のセットアップ手順
 - `/git-workflow` — Git 運用の標準手順（ブランチ・コミット・PR・rebase・hotfix・release）
 
 Git の運用を指示された場合は、まず `/git-workflow` スキルを参照してください。
