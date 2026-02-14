@@ -20,6 +20,16 @@
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github-pat}"
       }
+    },
+
+    // ── Context7 MCP Server ──
+    // ライブラリのドキュメントを取得するための MCP サーバー。
+    // 各エージェントが技術ドキュメントを参照する際に利用します。
+    // セットアップ: https://github.com/upstash/context7
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
     }
 
     // ── 追加の MCP サーバー例 ──
