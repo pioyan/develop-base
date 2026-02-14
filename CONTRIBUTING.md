@@ -7,8 +7,12 @@ pio-chat への貢献にご興味をいただきありがとうございます�
 
 ### 1. Issue の作成
 
-- バグを見つけた場合は [Bug Report](https://github.com/pioyan/pio-chat/issues/new?template=bug_report.yml) テンプレートを使用してください
-- 新機能の提案は [Feature Request](https://github.com/pioyan/pio-chat/issues/new?template=feature_request.yml) テンプレートを使用してください
+- バグを見つけた場合は
+  [Bug Report](https://github.com/pioyan/pio-chat/issues/new?template=bug_report.yml)
+  テンプレートを使用してください
+- 新機能の提案は
+  [Feature Request](https://github.com/pioyan/pio-chat/issues/new?template=feature_request.yml)
+  テンプレートを使用してください
 - 作業を開始する前に、既存の Issue を確認し、重複がないか確認してください
 
 ### 2. ブランチの作成
@@ -33,9 +37,11 @@ git checkout -b <type>/<short-description>
 
 ### 3. コミット
 
-コミットメッセージは [Conventional Commits](https://www.conventionalcommits.org/) に従ってください:
+コミットメッセージは
+[Conventional Commits](https://www.conventionalcommits.org/)
+に従ってください:
 
-```
+```text
 <type>(<scope>): <subject>
 
 <body>

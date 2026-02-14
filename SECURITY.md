@@ -7,7 +7,8 @@
 以下の方法で非公開にご報告をお願いします:
 
 1. **GitHub Security Advisory** (推奨):
-   [このリポジトリの Security Advisory](https://github.com/pioyan/pio-chat/security/advisories/new) から報告してください。
+   [セキュリティアドバイザリ](https://github.com/pioyan/pio-chat/security/advisories/new)
+   から報告してください。
 
 2. **メール**:
    <!-- TODO: セキュリティ連絡先のメールアドレスを記入してください -->
@@ -32,6 +33,6 @@
 
 <!-- TODO: サポート対象のバージョンを記入してください -->
 
-| バージョン | サポート状況 |
-|-----------|-------------|
+| バージョン    | サポート状況   |
+|--------------|--------------|
 | 最新      | ✅ サポート中 |
