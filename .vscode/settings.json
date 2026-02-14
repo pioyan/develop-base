@@ -1,0 +1,9 @@
+{
+    "chat.agent.maxRequests": 1000,
+    "chat.agentSessionProjection.enabled": true,
+    "chat.checkpoints.showFileChanges": true,
+    "chat.customAgentInSubagent.enabled": true,
+    "chat.tools.terminal.autoReplyToPrompts": true,
+    "chat.useClaudeHooks": true,
+    "inlineChat.defaultModel": "Auto (copilot)"
+}
