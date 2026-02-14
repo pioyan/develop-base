@@ -2,7 +2,6 @@
   // 推奨拡張機能
   // devcontainer 外でも同等の開発体験を提供するために定義
   "recommendations": [
-    "GitHub.copilot",
     "GitHub.copilot-chat",
     "GitHub.vscode-github-actions",
     "GitHub.vscode-pull-request-github",

@@ -1,4 +1,3 @@
-```chatagent
 ---
 name: docs-writer
 description: "コード変更に伴う README・CONTRIBUTING・Skill・Policy などのドキュメント更新提案を生成するエージェント。ドキュメントの陳腐化を防止します。"
@@ -72,4 +71,4 @@ tools:
 - ライセンス文の変更
 - 既存の文体・トーンの変更（一貫性維持のため）
 
-```
+
