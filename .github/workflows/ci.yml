@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   # ── GitHub Actions ワークフローの静的解析 ──
@@ -24,7 +25,7 @@ jobs:
       - uses: reviewdog/action-actionlint@v1
         with:
           reporter: github-pr-review
-          fail_level: error
+          fail_level: warning
 
   # ── Markdown の品質チェック ──
   markdownlint:
@@ -54,6 +55,8 @@ jobs:
   gitleaks:
     name: gitleaks
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v6
         with:
