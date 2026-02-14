@@ -1,8 +1,8 @@
-# Copilot カスタム指示 — pio-chat
+# Copilot カスタム指示 — sample-app
 
 ## プロジェクト概要
 
-pio-chat は pioyan が開発するチャットプロジェクトです。
+sample-app は pioyan が開発するサンプルプロジェクトです。
 
 ## リポジトリ構成
 
