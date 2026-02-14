@@ -2,13 +2,13 @@
 // 詳細: https://containers.dev/implementors/json_reference/
 {
   "name": "develop-base",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/universal:5.1.4",
 
   // ── Features ──
   // gh CLI・Docker-outside-of-Docker を追加
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1.1.0": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.5": {}
   },
 
   // ── 初回セットアップ ──
