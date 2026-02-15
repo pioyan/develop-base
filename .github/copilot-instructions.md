@@ -22,6 +22,8 @@ sample-app は pioyan が開発するサンプルプロジェクトです。
 ├── settings.json        # エージェント・Hooks 設定
 ├── extensions.json      # 推奨拡張機能
 └── mcp.json             # ローカル MCP サーバー設定
+agent_docs/              # AI エージェント向けリファレンス（自己参照用）
+human_docs/              # 人間向けドキュメント
 ```
 
 ## コーディング規約
@@ -80,6 +82,7 @@ PR を作成すると以下の衛生チェックが自動実行されます:
 | `@code-reviewer` | PR の差分をレビューし、品質・セキュリティ観点でコメントを提案 |
 | `@docs-writer` | コード変更に伴うドキュメント更新提案を生成 |
 | `@dev-env-builder` | ユーザーの要件に応じた開発環境（Dev Container・CI・Dependabot 等）を対話的に構築 |
+| `@git-operator` | Git 運用に精通した専門エージェント。ブランチ・コミット・rebase・PR・Issue・hotfix/release を規約に沿って実行 |
 
 ## Agent Skills
 
@@ -93,3 +96,15 @@ PR を作成すると以下の衛生チェックが自動実行されます:
 - `/git-workflow` — Git 運用の標準手順（ブランチ・コミット・PR・rebase・hotfix・release）
 
 Git の運用を指示された場合は、まず `/git-workflow` スキルを参照してください。
+
+## エージェント向けリファレンス
+
+`agent_docs/` には AI エージェントが自律的に参照するためのリファレンスがあります。
+詳細な設計情報や連携ルールが必要な場合は、以下のファイルを `read_file` で取得してください。
+
+- `agent_docs/reference-map.md` — エージェント・スキル・ポリシー間の依存関係マップ
+- `agent_docs/design-patterns.md` — エージェント設計の 3 パターン（読取専用型・対話生成型・監査修正型）
+- `agent_docs/naming-and-format.md` — ファイル命名・コードフェンス・構造の正規仕様
+- `agent_docs/mcp-usage.md` — GitHub MCP / Context7 MCP の用途・利用パターン
+- `agent_docs/tdd-template.md` — TDD セクションの独立リファレンス（t-wada 式サイクル）
+- `agent_docs/prompt-engineering.md` — エージェント・スキル記述のプロンプトベストプラクティス集

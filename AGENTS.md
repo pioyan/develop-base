@@ -43,6 +43,8 @@ Skills は手順書です。Copilot Chat で `/スキル名` として直接呼�
   - 定義: [.github/agents/docs-writer.md](.github/agents/docs-writer.md)
 - `@agent-builder` — プロジェクト固有のカスタムエージェント/スキルを対話的に設計・生成（コード実装エージェントにはTDDを組み込み）
   - 定義: [.github/agents/agent-builder.md](.github/agents/agent-builder.md)
+- `@git-operator` — Git運用に精通した専門エージェント。ブランチ・コミット・rebase・PR・Issue・hotfix/releaseを規約に沿って実行
+  - 定義: [.github/agents/git-operator.md](.github/agents/git-operator.md)
 
 ## Agent Skills 一覧
 

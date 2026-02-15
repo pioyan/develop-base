@@ -14,6 +14,7 @@ develop-base/
 │   │   ├── code-reviewer.md     #   PR レビューエージェント
 │   │   ├── dev-env-builder.md   #   開発環境構築エージェント
 │   │   ├── docs-writer.md       #   ドキュメント更新エージェント
+│   │   ├── git-operator.md      #   Git 運用エージェント
 │   │   └── repo-guardian.md     #   リポジトリ標準化エージェント
 │   ├── skills/                  # エージェントスキル（手順書）
 │   │   ├── ci-hygiene/          #   CI 衛生チェック導入
@@ -40,6 +41,14 @@ develop-base/
 │   ├── mcp.json                 # MCP サーバー設定
 │   └── settings.json            # エディタ・Hooks 設定
 ├── human_docs/                  # 人間向けドキュメント（本ディレクトリ）
+├── agent_docs/                  # AI エージェント向けリファレンス
+│   ├── README.md                #   ドキュメント一覧・インデックス
+│   ├── reference-map.md         #   エージェント参照マップ
+│   ├── design-patterns.md       #   エージェント設計パターン
+│   ├── naming-and-format.md     #   命名・フォーマット仕様
+│   ├── mcp-usage.md             #   MCP サーバー利用ガイド
+│   ├── tdd-template.md          #   TDD セクションテンプレート
+│   └── prompt-engineering.md    #   プロンプトエンジニアリングガイド
 ├── CODE_OF_CONDUCT.md           # 行動規範
 ├── CONTRIBUTING.md              # 開発参加ガイド
 ├── LICENSE                      # MIT ライセンス
@@ -58,7 +67,7 @@ develop-base/
 │           カスタムエージェント層              │
 │  @agent-builder   @dev-env-builder        │
 │  @repo-guardian    @code-reviewer           │
-│  @docs-writer                               │
+│  @docs-writer      @git-operator             │
 ├─────────────────────────────────────────────┤
 │              スキル層                        │
 │  /dev-env-setup  /repo-audit                 │
@@ -68,6 +77,7 @@ develop-base/
 │           ポリシー・設定層                    │
 │  policies/   workflows/   dependabot.yml     │
 │  .vscode/    .devcontainer/                  │
+│  agent_docs/                                 │
 ├─────────────────────────────────────────────┤
 │        コミュニティヘルスファイル層            │
 │  README  CONTRIBUTING  SECURITY  LICENSE     │
@@ -80,16 +90,24 @@ develop-base/
 
 ```text
 @agent-builder ──→ (既存エージェントのフォーマットを参照して新規生成)
+               ──→ agent_docs/ (設計パターン・命名仕様・TDD・プロンプトガイド)
 
 @dev-env-builder ──→ /dev-env-setup ──→ /ci-hygiene
                                     └──→ /dependabot-baseline
+                 ──→ agent_docs/mcp-usage.md
 
 @repo-guardian ──→ /repo-audit ──→ policies/repository-checklist.md
                └──→ /repo-apply-baseline
 
 @code-reviewer ──→ /git-workflow
 
-@docs-writer ──→ (直接ファイルを参照)
+@git-operator ──→ /git-workflow
+             ──→ CONTRIBUTING.md
+             ──→ .github/PULL_REQUEST_TEMPLATE.md
+             ──→ .github/ISSUE_TEMPLATE/ (bug_report.yml, feature_request.yml)
+
+@docs-writer ──→ agent_docs/naming-and-format.md
+             ──→ (直接ファイルを参照)
 ```
 
 ---
@@ -142,6 +160,7 @@ tools:
 | `code-reviewer` | search, fetch | PR レビューコメント提案 |
 | `docs-writer` | search, editFiles | ドキュメント更新提案 |
 | `agent-builder` | search, editFiles, runInTerminal, fetch | カスタムエージェントの対話的設計・生成 |
+| `git-operator` | search, runInTerminal | Git 運用（ブランチ・コミット・PR・Issue・hotfix/release） |
 
 ### スキル（`.github/skills/`）
 
@@ -196,6 +215,16 @@ description: "説明"
 | `settings.json` | Copilot Hooks（postSave / postCommand）、エージェント設定 |
 | `extensions.json` | 推奨拡張機能リスト |
 | `mcp.json` | GitHub MCP Server（Docker 経由）の接続設定 |
+
+### ドキュメント
+
+| ディレクトリ | 対象読者 | 内容 |
+|------------|---------|------|
+| `human_docs/` | 人間の開発者 | 使い方・カスタマイズ手順・利用フロー |
+| `agent_docs/` | AI エージェント | 自己参照用リファレンス・設計仕様・連携ルール |
+
+`agent_docs/` は AI エージェントが `read_file` で自律的に取得するリファレンス集です。
+エージェント間の参照関係・設計パターン・命名仕様・MCP 利用ガイド・TDD テンプレート・プロンプトベストプラクティスが含まれます。
 
 ### コミュニティヘルスファイル
 
