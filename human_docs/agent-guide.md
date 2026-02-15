@@ -145,6 +145,59 @@ PR の差分を読み、以下の観点でレビューコメントを提案し�
 
 ---
 
+### `@git-operator` — Git 運用
+
+**いつ使う？**
+
+- ブランチの作成・切替・削除を規約に沿って行いたいとき
+- Conventional Commits 形式でコミットしたいとき
+- rebase・PR 作成・hotfix・release フローを実行したいとき
+- Issue（バグ報告・機能要望）をテンプレートに沿って作成したいとき
+
+**何をしてくれる？**
+
+Git の運用全般をリポジトリ規約に沿って実行します:
+
+| カテゴリ | 操作例 |
+|---------|--------|
+| ブランチ管理 | 作成・切替・削除・一覧表示 |
+| コミット | Conventional Commits 形式・・amend・revert |
+| Rebase | main の取り込み・interactive rebase |
+| PR | テンプレートを使用した PR 作成・ステータス確認 |
+| Issue | バグ報告・機能要望テンプレートに沿った Issue 作成 |
+| Hotfix | 緊急修正ブランチの作成からマージまで |
+| Release | release ブランチ・タグ付け・GitHub Release 作成 |
+
+**使い方の例:**
+
+```text
+@git-operator feat/add-login-page ブランチを作成してください
+```
+
+```text
+@git-operator 現在の変更を Conventional Commits 形式でコミットしてください
+```
+
+```text
+@git-operator main の最新を取り込んで rebase してください
+```
+
+```text
+@git-operator この変更を PR にしてください
+```
+
+```text
+@git-operator ログインページが表示されないバグを Issue として報告してください
+```
+
+```text
+@git-operator v1.2.0 のリリースフローを実行してください
+```
+
+> **安全性**: 破壊的な操作（force-push・reset --hard・ブランチ削除等）は必ず実行前に確認が入ります。
+
+---
+
 ### `@agent-builder` — カスタムエージェント作成
 
 **いつ使う？**
@@ -202,7 +255,7 @@ Copilot Chat で `/スキル名` として直接呼び出すこともできま�
 | `/repo-apply-baseline` | 不足ファイルの追加手順とテンプレート | `@repo-guardian` が参照 |
 | `/ci-hygiene` | CI 衛生チェック（actionlint 等）の導入手順 | CI 初期導入時 |
 | `/dependabot-baseline` | Dependabot の段階的導入手順 | 依存管理の自動化時 |
-| `/git-workflow` | ブランチ・コミット・PR・rebase の標準手順 | Git 操作全般 |
+| `/git-workflow` | ブランチ・コミット・PR・rebase の標準手順 | `@code-reviewer`, `@git-operator` が参照 |
 
 ---
 
@@ -263,3 +316,21 @@ Copilot Chat で `/スキル名` として直接呼び出すこともできま�
 | コマンド実行後 | 全ファイル | typos（誤字検知） |
 
 手動で lint を実行する必要はありません。
+
+---
+
+## エージェント向けリファレンス（`agent_docs/`）
+
+`agent_docs/` ディレクトリには、AI エージェントが自律的に参照するためのリファレンスが格納されています。
+エージェントは必要に応じてこれらのドキュメントを `read_file` で取得し、設計判断や作業の精度を向上させます。
+
+| ファイル | 概要 |
+|---------|------|
+| `reference-map.md` | エージェント・スキル・ポリシー間の依存関係マップ |
+| `design-patterns.md` | エージェント設計の 3 パターン |
+| `naming-and-format.md` | ファイル命名・コードフェンス・構造の正規仕様 |
+| `mcp-usage.md` | GitHub MCP / Context7 MCP の利用パターン |
+| `tdd-template.md` | TDD セクションの独立リファレンス |
+| `prompt-engineering.md` | プロンプトベストプラクティス集 |
+
+> **`human_docs/` との違い**: `human_docs/` は人間の開発者向け、`agent_docs/` は AI エージェントの自己参照用です。

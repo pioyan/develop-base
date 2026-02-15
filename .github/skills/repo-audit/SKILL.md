@@ -59,6 +59,7 @@ description: "リポジトリのベストプラクティス準拠状況を監査
 | `.github/copilot-instructions.md` | 推奨 | リポジトリ固有の指示が記載 |
 | `.github/agents/` | 推奨 | カスタムエージェントが定義 |
 | `.github/skills/` | 推奨 | エージェントスキルが存在 |
+| `agent_docs/` | 推奨 | AI エージェント向けリファレンスが存在 |
 
 ## 出力フォーマット
 

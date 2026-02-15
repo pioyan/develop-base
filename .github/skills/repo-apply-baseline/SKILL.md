@@ -24,22 +24,26 @@ description: "監査結果に基づき、不足しているベストプラクテ
 監査で見つかった不足項目を、以下の優先度で適用してください:
 
 #### 優先度: 高（セキュリティ・品質ゲート）
+
 1. `SECURITY.md` — 脆弱性報告導線の整備
 2. `.github/workflows/ci.yml` — 基本 CI の導入
 3. `.github/dependabot.yml` — 依存更新の自動化
 4. `LICENSE` — ライセンスファイル
 
 #### 優先度: 中（開発プロセス標準化）
-5. `.github/PULL_REQUEST_TEMPLATE.md` — PR テンプレート
-6. `.github/ISSUE_TEMPLATE/bug_report.yml` — バグ報告フォーム
-7. `.github/ISSUE_TEMPLATE/feature_request.yml` — 機能要望フォーム
-8. `.github/CODEOWNERS` — コードオーナー
-9. `CONTRIBUTING.md` — 開発参加ガイド
+
+1. `.github/PULL_REQUEST_TEMPLATE.md` — PR テンプレート
+2. `.github/ISSUE_TEMPLATE/bug_report.yml` — バグ報告フォーム
+3. `.github/ISSUE_TEMPLATE/feature_request.yml` — 機能要望フォーム
+4. `.github/CODEOWNERS` — コードオーナー
+5. `CONTRIBUTING.md` — 開発参加ガイド
 
 #### 優先度: 低（推奨）
-10. `README.md` — プロジェクト説明の充実
-11. `.github/copilot-instructions.md` — Copilot カスタム指示
-12. `CODE_OF_CONDUCT.md` — 行動規範
+
+1. `README.md` — プロジェクト説明の充実
+2. `.github/copilot-instructions.md` — Copilot カスタム指示
+3. `CODE_OF_CONDUCT.md` — 行動規範
+4. `agent_docs/` — AI エージェント向けリファレンス（カスタムエージェント存在時）
 
 ## 適用後の検証
 
