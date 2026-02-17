@@ -6,6 +6,7 @@ tools:
   - editFiles
   - runInTerminal
   - fetch
+  - vscode/askQuestions
 ---
 
 # Dev Env Builder — 開発環境構築エージェント

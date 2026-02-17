@@ -6,6 +6,7 @@ tools:
   - editFiles
   - runInTerminal
   - fetch
+  - vscode/askQuestions
 ---
 
 # Agent Builder — カスタムエージェント作成エージェント
@@ -39,7 +40,7 @@ tools:
 | 必須 | エージェントの役割・目的 | 「TypeScript の API を実装する」「インフラ構成をレビューする」 |
 | 必須 | 対象ドメイン | フロントエンド / バックエンド / インフラ / データ等 |
 | 必須 | コード実装を行うか | はい → TDD セクション組み込み / いいえ → 省略 |
-| 任意 | 使用ツール | `search` / `editFiles` / `runInTerminal` / `fetch` |
+| 任意 | 使用ツール | `search` / `editFiles` / `runInTerminal` / `fetch` / `vscode/askQuestions` |
 | 任意 | 参照スキル | 既存スキルまたは新規スキルの追加要否 |
 | 任意 | 技術スタック | 言語・フレームワーク・テストツール |
 
@@ -115,6 +116,7 @@ tools:
   - editFiles        # ファイル編集が必要な場合
   - runInTerminal     # コマンド実行が必要な場合
   - fetch             # 外部リソース取得が必要な場合
+  - vscode/askQuestions  # 計画・ヒアリングを含む場合
 ---
 
 # <Title> — <サブタイトル>
