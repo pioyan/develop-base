@@ -8,8 +8,8 @@
 | パターン | 目的 | ツール構成 | 代表エージェント |
 |---------|------|-----------|----------------|
 | 読取専用型 | 分析・レビュー・提案 | search, fetch | `@code-reviewer` |
-| 対話生成型 | ヒアリング→設計→生成 | search, editFiles, runInTerminal, fetch | `@agent-builder`, `@dev-env-builder` |
-| 監査修正型 | 自動監査→修正→PR 作成 | search, editFiles, runInTerminal, fetch | `@repo-guardian` |
+| 対話生成型 | ヒアリング→設計→生成 | search, editFiles, runInTerminal, fetch, vscode/askQuestions | `@agent-builder`, `@dev-env-builder` |
+| 監査修正型 | 自動監査→修正→PR 作成 | search, editFiles, runInTerminal, fetch, vscode/askQuestions | `@repo-guardian` |
 
 > `@docs-writer` は読取専用型と対話生成型のハイブリッドです（分析は読取専用、更新は editFiles）。
 
@@ -87,6 +87,7 @@ tools:
   - editFiles       # ファイル生成・編集（必須）
   - runInTerminal   # 検証コマンドの実行（推奨）
   - fetch           # 外部ドキュメント取得（任意）
+  - vscode/askQuestions  # ユーザーへの質問・確認（推奨）
 ```
 
 ### 行動原則テンプレート
@@ -161,6 +162,7 @@ tools:
   - editFiles       # 修正ファイルの生成（必須）
   - runInTerminal   # lint 検証・git/gh コマンド（必須）
   - fetch           # 外部ポリシーの参照（任意）
+  - vscode/askQuestions  # 計画の確認・承認（推奨）
 ```
 
 ### 行動原則テンプレート

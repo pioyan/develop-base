@@ -5,6 +5,7 @@ description: "Git 運用に精通した専門エージェント。ブランチ�
 tools:
   - search
   - runInTerminal
+  - vscode/askQuestions
 ---
 
 # Git Operator — Git 運用エージェント

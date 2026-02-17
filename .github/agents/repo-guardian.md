@@ -6,6 +6,7 @@ tools:
   - editFiles
   - runInTerminal
   - fetch
+  - vscode/askQuestions
 ---
 
 # Repo Guardian — リポジトリ標準化エージェント
